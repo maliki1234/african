@@ -676,7 +676,6 @@
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
-  font-family: 'Righteous', cursive;
 }
 
 .btn-small {
@@ -1195,6 +1194,7 @@ html {
   margin: 30px;
   font-size: 25px;
   text-transform: uppercase;
+  font-family: Bodoni;
   font-family: 'Concert One', cursive;
   font-weight: 900;
 }
