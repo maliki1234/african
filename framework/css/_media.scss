@@ -1,0 +1,129 @@
+#media{
+    background-image: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    padding-top: 30px;
+    background-attachment: fixed;
+    h2{
+        font-size: 20px;
+        text-align: center;
+        margin: 30px;
+        font-size: 25px;
+        text-transform: uppercase;
+        font-family: 'Concert One', cursive;
+        font-weight: 900;
+
+    }
+    .media-container{
+        width: 90%;
+        margin: auto;
+        // padding: 40px;
+        // background: #99f;
+        margin-left: 40px;
+    }
+    .over-overlay{
+        position: fixed;
+        top: 60px;
+        // background: red;
+        background: rgba(0, 0, 0, 0.4);
+        width: 100%;
+        left: 0;
+        height: calc(100vh - 60px);
+        display: none;
+        span{
+            // width: 100%;
+            text-align: right;
+            // background: #f77;
+            float: right;
+            margin-right: 30px;
+            margin-top: 20px;
+            padding: 20px;
+            cursor: pointer;
+            color: #fff;
+
+
+        }
+        img{
+            object-fit: cover;
+        }
+    }
+
+    .gallery{
+        display: grid;
+        grid-template-columns: repeat(auto-fill,75px);
+        grid-auto-rows: 100px;
+        grid-auto-flow: dense;
+        height: 100vh;
+        height: 100%;
+        width: 100%;
+    }
+    .item{
+        display:grid;
+        overflow-y: hidden;
+
+    }
+    .item:hover{
+        .item_overlay{
+            transform: translateY(0);
+        }
+    }
+    img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        grid-row: 1;
+        grid-column: 1;
+    }
+    .item_overlay{
+        grid-row: -1;
+        grid-column: -1;
+        width: 100%;
+        height: 100%;
+        // background: red;
+        background: #2225;
+        display: inherit;
+        justify-items: center;
+        align-items: center;
+        transform: translateY(100%);
+        transition: all ease 250ms;
+
+    }
+
+    button{
+        color: #000;
+        border: 1px solid #000;
+        // background: #aaaa;
+    }
+
+    .h2{
+        grid-row: span 2;
+    }
+    .h3{
+        grid-row: span 3;
+    }
+    .h4{
+        grid-row: span 4;
+    }
+    .v2{
+        grid-column: span 2;
+    }
+    .v3{
+        grid-column: span 3;
+    }
+    .v4{
+        grid-column: span 4;
+    }
+
+    @include min-media-query($mediaBp1Width){
+        height: 130vh;
+        .gallery{
+            grid-template-columns: repeat(auto-fill,100px);
+            grid-auto-rows: 100px;
+        }
+        .media-container{
+            margin-left: 70px;
+        }
+    }
+
+}

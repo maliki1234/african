@@ -1,0 +1,103 @@
+#home{
+    display: grid;
+    // background: url("../../media/homepage.png");
+    // background-size: cover;
+    height: 70vh;
+    overflow: hidden;
+    width: 100%;
+    // background: #f40;
+    .homepage-phone-image{
+        height: 100%;
+        object-fit: cover;
+        grid-row: 1;
+        grid-column: 1;
+        
+
+    }
+    .homepage-overlay{
+        width: 100%;
+        height: 100%;
+        grid-row: -1;
+        grid-column: -1;
+        display: grid;
+        align-items: center;
+        justify-items: center;
+    }
+
+    h3{
+        width: 200px;
+        padding: 20px;
+        font-size: 30px;
+        margin-top: 30px;
+        font-family: 'Abril Fatface', cursive;
+    }
+    button{
+        background: #F26D7E;
+        margin-bottom: 30px;
+    }
+    @include min-media-query($phone){
+        h3{
+            width: 300px;
+            font-size: 40px;
+
+        }
+        button{
+            margin-bottom: 50px;
+            // width: 310px;
+
+        }
+    }
+    @include min-media-query($mediaBp1Width){
+        background: url(./../../media/backgroundi.png);
+        display: block;
+        background-size: cover;
+        background-repeat: no-repeat;
+        .homepage-phone-image{
+            display: none;
+        }
+        .homepage-overlay{
+            justify-items: left;
+        }
+        .homepage-overlay{
+            margin-left: 30px;
+        }
+        button{
+            margin-left: 50px;
+            margin-bottom: 10px;
+        }
+        h3{
+            line-height: 70px;
+            font-size: 45px;
+        }
+        }
+        @include min-media-query($mediaMaxWidth){
+            .homepage-overlay{
+                margin-left: 35px;
+            }
+            h3{
+                width: 400px;
+            }
+            button{
+                margin-left: 70px;
+                padding: 20px 45px;
+                border-radius: 5px;
+                box-shadow: 1px 2px 2px #000;
+                outline: none;
+            }
+            button:hover{
+                animation: ease button .5s;
+            }
+
+            @keyframes button {
+                0%{
+                    transform: rotateZ(0deg);
+                }
+                50%{
+                    transform: rotateZ(5deg);
+                }
+                100%{
+                    transform: rotateZ(0deg);
+                }
+            }
+        }
+}
