@@ -880,7 +880,7 @@ html {
 .navbar ul {
   list-style: none;
   display: none;
-  position: fixed;
+  position: absolute;
   margin: 0;
   left: 0;
   width: 100%;
