@@ -827,7 +827,7 @@ html {
   position: -webkit-sticky;
   position: sticky;
   top: 0;
-  z-index: 100;
+  z-index: 300;
 }
 
 .navbar .navbar-logo {
@@ -886,6 +886,7 @@ html {
   width: 100%;
   padding: 10px 0;
   background: #000;
+  z-index: 900;
 }
 
 @media screen and (min-width: 770px) {
@@ -1629,6 +1630,116 @@ html {
   }
   #contact h2 {
     margin: 50px 0;
+  }
+}
+
+#testimonial {
+  width: 100%;
+  background: url("../../media/gallery/23.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow-x: hiden;
+  padding: 30px 0;
+}
+
+#testimonial .testimonial-container {
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  background: #fffa;
+  display: -ms-grid;
+  display: grid;
+  quotes: '\201c' '\201d';
+}
+
+#testimonial .testimonial-card {
+  border: 1px solid #444;
+  margin: 20px 20px;
+  display: none;
+  -webkit-transition: all ease 2s;
+  transition: all ease 2s;
+}
+
+#testimonial .testimonial-card:nth-of-type(1) {
+  display: block;
+}
+
+#testimonial h4 {
+  text-align: center;
+  font-size: 22px;
+  margin: 30px 0;
+}
+
+#testimonial .personel-detail {
+  margin-left: 10px;
+  margin-bottom: 20px;
+}
+
+#testimonial p:before {
+  content: open-quote;
+  font-size: 70px;
+}
+
+#testimonial p:after {
+  content: close-quote;
+  font-size: 70px;
+  display: block;
+  float: right;
+}
+
+#testimonial p {
+  font-size: 15px;
+  padding: 20px;
+  text-align: justify;
+  font-style: italic;
+}
+
+#testimonial img {
+  width: 50px;
+  height: 50px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+}
+
+#testimonial .testimonial-card-container {
+  width: 100%;
+}
+
+#testimonial span {
+  left: 10px;
+  position: relative;
+  bottom: 20px;
+  font-size: 12px;
+  color: #a00;
+}
+
+#testimonial .testimonial-animate {
+  display: block;
+  -webkit-animation: anime 1s ease;
+          animation: anime 1s ease;
+}
+
+@-webkit-keyframes anime {
+  0% {
+    -webkit-transform: rotateX(90deg);
+            transform: rotateX(90deg);
+  }
+  100% {
+    -webkit-transform: rotateX(0);
+            transform: rotateX(0);
+  }
+}
+
+@keyframes anime {
+  0% {
+    -webkit-transform: rotateX(90deg);
+            transform: rotateX(90deg);
+  }
+  100% {
+    -webkit-transform: rotateX(0);
+            transform: rotateX(0);
   }
 }
 /*# sourceMappingURL=main.css.map */

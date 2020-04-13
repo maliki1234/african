@@ -1,6 +1,8 @@
 import {html , viewimage , close} from './media.js';
 // maliki();
 
+import {displayTestimonial} from './testimonial.js';
+
 
 
 // NAVBAR SECTION
@@ -60,3 +62,22 @@ closer.onclick = ()=>{
 }
 console.log(item_overlay)
 
+ const testimonial_card = document.querySelectorAll('.testimonial-card')
+
+
+// var interval = setInterval(displayTestimonial(testimonial_card), 100);
+
+
+// clearInterval(interval);
+
+
+// const displayTestimonial = ()=>{
+//     console.log('maliki');
+// }
+
+
+
+const interval = setInterval(function 
+    () {
+        displayTestimonial(testimonial_card)
+},7000)
