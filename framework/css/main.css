@@ -1103,6 +1103,7 @@ html {
 #about {
   margin: 30px 0;
   width: 100%;
+  height: 100vh;
   padding: 20px;
   overflow: hidden;
 }
@@ -1159,7 +1160,8 @@ html {
 
 @media screen and (min-width: 770px) {
   #about h2 {
-    font-size: 40px;
+    font-size: 50px;
+    font-family: 'Acme', sans-serif;
   }
   #about p {
     width: 80%;
@@ -1168,6 +1170,10 @@ html {
     letter-spacing: 2px;
     padding: 40px 10px;
     color: #000;
+    margin-top: 20px;
+  }
+  #about .btn-about {
+    margin-top: 40px;
   }
 }
 
@@ -1314,6 +1320,11 @@ html {
   #media {
     height: 130vh;
   }
+  #media h2 {
+    font-size: 50px;
+    margin: 40px 0;
+    font-family: 'Lexend Giga', sans-serif;
+  }
   #media .gallery {
     -ms-grid-columns: (100px)[auto-fill];
         grid-template-columns: repeat(auto-fill, 100px);
@@ -1330,7 +1341,7 @@ html {
 
 #route {
   width: 100%;
-  height: 100vh;
+  padding: 40px 0;
 }
 
 #route h2 {
@@ -1346,6 +1357,10 @@ html {
   -ms-grid-columns: 1fr;
       grid-template-columns: 1fr;
   grid-row-gap: 30px;
+  justify-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 #route .card {
@@ -1354,6 +1369,21 @@ html {
   display: grid;
   padding-bottom: 20px;
   margin: 20px 0;
+  border-radius: 10px;
+  -webkit-transition: -webkit-box-shadow 25ms ease;
+  transition: -webkit-box-shadow 25ms ease;
+  transition: box-shadow 25ms ease;
+  transition: box-shadow 25ms ease, -webkit-box-shadow 25ms ease;
+}
+
+#route .card:hover {
+  -webkit-box-shadow: 1px 2px 2px #aaa;
+          box-shadow: 1px 2px 2px #aaa;
+}
+
+#route .card:hover button {
+  -webkit-animation: btn .5s ease-in-out;
+          animation: btn .5s ease-in-out;
 }
 
 #route .card-container {
@@ -1424,15 +1454,10 @@ html {
 }
 
 #route button {
-  background: #a11;
-  -webkit-box-shadow: 2px 2px 2px #e11;
-          box-shadow: 2px 2px 2px #e11;
+  background: #500;
+  -webkit-box-shadow: 2px 2px 2px #200;
+          box-shadow: 2px 2px 2px #200;
   cursor: pointer;
-}
-
-#route button:hover {
-  -webkit-animation: btn .5s ease-in-out;
-          animation: btn .5s ease-in-out;
 }
 
 #route p {
@@ -1476,6 +1501,134 @@ html {
   100% {
     -webkit-transform: translateY(0px);
             transform: translateY(0px);
+  }
+}
+
+@media screen and (min-width: 480px) {
+  #route h2 {
+    font-size: 40px;
+  }
+  #route .route-container {
+    -ms-grid-columns: (45%)[auto-fill];
+        grid-template-columns: repeat(auto-fill, 45%);
+    grid-column-gap: 10px;
+    justify-items: center;
+  }
+  #route .card {
+    margin: 0;
+  }
+  #route img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@media screen and (min-width: 640px) {
+  #route .route-container {
+    -ms-grid-columns: (32%)[auto-fill];
+        grid-template-columns: repeat(auto-fill, 32%);
+  }
+}
+
+@media screen and (min-width: 770px) {
+  #route .route-container {
+    -ms-grid-columns: (24%)[auto-fill];
+        grid-template-columns: repeat(auto-fill, 24%);
+  }
+}
+
+#contact {
+  width: 100%;
+  background: #000;
+  padding: 30px 0;
+}
+
+#contact h2 {
+  color: #76ce13;
+  font-size: 32px;
+  text-align: center;
+  margin-top: 30px;
+  text-transform: capitalize;
+}
+
+#contact form {
+  width: 100%;
+}
+
+#contact .double-form {
+  display: -ms-grid;
+  display: grid;
+}
+
+#contact input, #contact textarea {
+  margin: 40px 0;
+  border: none;
+  background: #000;
+  border-bottom: 1px solid #aaa;
+  outline: none;
+  color: #fff;
+}
+
+#contact input {
+  height: 33px;
+  padding: 2px 10px;
+}
+
+#contact textarea {
+  padding: 5px 10px;
+}
+
+#contact ::-webkit-input-placeholder {
+  color: #999;
+}
+
+#contact :-ms-input-placeholder {
+  color: #999;
+}
+
+#contact ::-ms-input-placeholder {
+  color: #999;
+}
+
+#contact ::placeholder {
+  color: #999;
+}
+
+#contact .btn-container {
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  justify-items: center;
+}
+
+#contact .btn-submit {
+  padding: 10px 30px;
+  border: none;
+  background: #040;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #fff;
+}
+
+@media screen and (min-width: 770px) {
+  #contact {
+    padding: 40px 0;
+  }
+  #contact .double-form {
+    -ms-grid-columns: (49%)[auto-fill];
+        grid-template-columns: repeat(auto-fill, 49%);
+    grid-column-gap: 20px;
+    margin: 30px 0;
+  }
+  #contact .btn-submit {
+    padding: 20px 40px 30px;
+    margin: 30px;
+  }
+  #contact h2 {
+    margin: 50px 0;
   }
 }
 /*# sourceMappingURL=main.css.map */

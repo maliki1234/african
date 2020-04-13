@@ -51,8 +51,8 @@ const viewimage = (e)=>{
     let imgview = document.querySelector('.over-overlay')
     imgview.style.display = 'block';
     imgview.querySelector('.image').src= img.src
-    console.log(img.src)
-    document.querySelector('.item-overylay').style.transfom = 'translateY(100%)';
+    
+   const item_overlay = document.querySelector('.item-overylay');
 }
 
 

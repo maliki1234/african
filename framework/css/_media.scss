@@ -124,6 +124,11 @@
 
     @include min-media-query($mediaBp1Width){
         height: 130vh;
+        h2{
+            font-size: 50px;
+            margin: 40px 0;
+            font-family: 'Lexend Giga', sans-serif;
+        }
         .gallery{
             grid-template-columns: repeat(auto-fill,100px);
             grid-auto-rows: 100px;
