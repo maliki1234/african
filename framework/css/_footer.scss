@@ -1,0 +1,109 @@
+footer{
+    width: 100%;
+    background: #000;
+    color: #fff;
+    padding: 40px 0;
+    .footer-container{
+        padding: 10px;
+    }
+    .footer-logo{
+        display: grid;
+        justify-items: center;
+    }
+    .footer-logo-img{
+        width: 100px;
+
+    }
+    h2{
+        text-align: center;
+        margin: 20px 0;
+    }
+    .footer-adress{
+        margin-top: 30px;
+        // display: grid;
+        justify-items: center;
+        // grid-template-columns: 1fr 4fr;
+    }
+    .footer-term-container{
+        width: 100%;
+        // padding: 0 20px;
+        background: blue($color: #000000);
+    }
+    .footer-term-item{
+       padding: 5px 30px;
+
+    }
+    .footer-term-link{
+        color: #fff;
+        text-decoration: none;
+    }
+    .footer-adress-container{
+        display: grid;
+
+        // grid-template-columns: 1fr 4fr;
+    }
+    .footer-adress-item{
+        display: grid;
+        grid-template-columns: 1fr 4fr;
+        padding: 0 30px;
+        grid-column-gap: 5px;
+        font-size: 12px;
+        margin: 10px 0;
+    }
+    .footer-adress-item-icon{
+        width: 20px;
+    }
+    .footer-adress-item-text-link{
+        text-decoration: none;
+        overflow: hidden;
+        color: #fff;
+    }
+    .footer-adress-item-text-link:hover{
+        color: #711;
+    }
+    .footer-social-container{
+        width: 100%;
+        padding: 0 30px ;
+        // display: grid;
+        // justify-items: center;
+        // grid-template-columns: repeat(auto-fill, 1fr);
+    }
+    .footer-social-item{
+        // padding: 0 20px;
+        display: inline;
+        float: left;
+        padding: 5px;
+        cursor: pointer;
+
+    }
+    .footer-social-item-icon{
+        width: 20px;
+        margin: 0 10px;
+        line-height: 40px;
+        // padding: ;
+        
+    }
+
+    .footer-sub{
+        // background: blue;
+        margin-top: 40px;
+        padding-top: 60px;
+    }
+
+    .footer-input{
+        height: 30px;
+        // margin: 10px 0;
+        outline: none;
+        border: none;
+    }
+    .footer-input[type=email]{
+        padding: 0 8px;
+    }
+    .footer-input-submit{
+        background: #f41;
+        color: #fff;
+    }
+    
+
+    
+}

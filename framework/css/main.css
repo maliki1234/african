@@ -1742,4 +1742,137 @@ html {
             transform: rotateX(0);
   }
 }
+
+@media screen and (min-width: 770px) {
+  #testimonial {
+    padding: 0;
+  }
+  #testimonial .testimonial-container {
+    padding: 10%;
+  }
+  #testimonial .testimonial-card-container {
+    width: 92%;
+    margin: auto;
+  }
+  #testimonial .testimonial-card {
+    border: none;
+  }
+  #testimonial h4 {
+    font-size: 40px;
+    font-family: 'B612 Mono', monospace;
+  }
+}
+
+footer {
+  width: 100%;
+  background: #000;
+  color: #fff;
+  padding: 40px 0;
+}
+
+footer .footer-container {
+  padding: 10px;
+}
+
+footer .footer-logo {
+  display: -ms-grid;
+  display: grid;
+  justify-items: center;
+}
+
+footer .footer-logo-img {
+  width: 100px;
+}
+
+footer h2 {
+  text-align: center;
+  margin: 20px 0;
+}
+
+footer .footer-adress {
+  margin-top: 30px;
+  justify-items: center;
+}
+
+footer .footer-term-container {
+  width: 100%;
+  background: 0;
+}
+
+footer .footer-term-item {
+  padding: 5px 30px;
+}
+
+footer .footer-term-link {
+  color: #fff;
+  text-decoration: none;
+}
+
+footer .footer-adress-container {
+  display: -ms-grid;
+  display: grid;
+}
+
+footer .footer-adress-item {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 4fr;
+      grid-template-columns: 1fr 4fr;
+  padding: 0 30px;
+  grid-column-gap: 5px;
+  font-size: 12px;
+  margin: 10px 0;
+}
+
+footer .footer-adress-item-icon {
+  width: 20px;
+}
+
+footer .footer-adress-item-text-link {
+  text-decoration: none;
+  overflow: hidden;
+  color: #fff;
+}
+
+footer .footer-adress-item-text-link:hover {
+  color: #711;
+}
+
+footer .footer-social-container {
+  width: 100%;
+  padding: 0 30px;
+}
+
+footer .footer-social-item {
+  display: inline;
+  float: left;
+  padding: 5px;
+  cursor: pointer;
+}
+
+footer .footer-social-item-icon {
+  width: 20px;
+  margin: 0 10px;
+  line-height: 40px;
+}
+
+footer .footer-sub {
+  margin-top: 40px;
+  padding-top: 60px;
+}
+
+footer .footer-input {
+  height: 30px;
+  outline: none;
+  border: none;
+}
+
+footer .footer-input[type=email] {
+  padding: 0 8px;
+}
+
+footer .footer-input-submit {
+  background: #f41;
+  color: #fff;
+}
 /*# sourceMappingURL=main.css.map */
