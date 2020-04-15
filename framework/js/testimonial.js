@@ -36,7 +36,7 @@ const generateRandomNumber = (limit) =>{
     while (generateRandomNumber > randomNumber) {
         Math.floor(Math.random() * limit) + 1;
     }
-    return randomNumber
+    return randomNumber;
 
 }
 

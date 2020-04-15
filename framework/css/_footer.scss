@@ -104,7 +104,57 @@ footer{
         background: #f41;
         color: #fff;
     }
+    .footer-input-submit:hover{
+        background: #a21;
+        // font-size: 12px;
+    }
     
 
-    
+    @include min-media-query($mediaBp1Width){
+        margin: 0;
+        // background: red;
+        .footer-container{
+            // display: grid;
+            display: flex;
+            flex-direction: row;
+            // grid-template-columns: repeat(auto-fil, 15%);
+            padding: 0;
+        }
+        .footer-logo-img{
+            width: 300px;
+        }
+        h2{
+            font-size: 30px;
+            text-transform: capitalize;
+        }
+        .footer-adress{
+            margin-top: 0;
+        }
+        .footer-term-item{
+            padding: 5px 0;
+        }
+        .footer-adress-item{
+            padding: 0 10px;
+            margin-top: 6px 0;
+        }
+
+        .footer-sub{
+            // display: ;
+            margin-top: 20px;
+            padding: 0;
+            position: relative;
+            width: 320px;
+            // top: 40px;
+            // bottom: ;
+        }
+        form{
+            margin-right: 4px;
+            display: grid;
+            grid-template-columns: 6fr 1fr;
+        }
+        .footer-input-submit{
+            padding: 0 4px;
+        }
+      
+    }
 }
