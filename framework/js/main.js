@@ -16,6 +16,22 @@ import {
 from './navbar.js';
 
 
+import {
+    smoothScroll
+}
+from './smoothScroll.js';
+
+import {
+    observ_function
+}
+from './about.js'
+
+
+
+// import {
+//     intersect
+// }
+// from './Intersection.js'
 
 // start gallery
 
@@ -57,6 +73,25 @@ const navbar_sector = ()=>{
     const navbar_active = document.querySelector('.navbar-link-toggle')
     navbar_nav(navbar_bar, navbar_links, navabr_li, navbar_icons, navbar_active)
     
+
+
+    // const about = document.querySelector('.navbar-links li')
+    // about.addEventListener('click', ()=>{
+    //     smoothScroll('#about', 1000)
+    //     console.log('maliki')
+    // }  )
+
+
+    // var navbar_li = document.querySelectorAll('.navbar-links li');
+    // navbar_li.forEach(link => {
+    //     link.addEventListener('click', ()=>{
+    //         // console.log('maliki')
+    //         let lik = link.querySelector('a').dataset.link;
+    //         smoothScroll(lik , 1000);
+            
+    //     // console.log(lik)
+    //     })
+    // });
    
 }
 
@@ -67,28 +102,23 @@ const navbar_sector = ()=>{
 
 const about = document.querySelector('#about');
 
-let options = {
-    // root: null,
-    // rootMargin: '0px',
-    // threshold: 1.0
-  }
-  let n = document.querySelector('.about-container');
-  let observer = new IntersectionObserver((entries, observer)=>{
-      entries.forEach(entry=>{
-          console.log(entry)
-          if(entry.isIntersecting){
-              
-              n.style.transform = 'translateX(0%)'
-          }
-          else{
-              n.style.transform = 'translateX(100%)';
-          }
-      })
-  }, options);
+
+
+observ_function(about)
 
 
 
-  observer.observe(about);
+
+
+
+// // INTERSECTION MODULE
+
+// const media_inter = document.querySelector('#media');
+// let typeOf = 'fromLeftToCenter';
+// let contaiens = document.querySelectorAll('#media div');
+
+// intersect(media_inter, typeOf,contaiens);
+
 
 
 
@@ -98,6 +128,7 @@ const all_function = () => {
     gallery_sector();
     testimonial_sector();
     navbar_sector()
+    
 };
 
 

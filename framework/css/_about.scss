@@ -14,6 +14,7 @@
         // font-family: Bodoni;
         font-size: 30px;
         text-transform: capitalize;
+        // transform: translateX(-100%);
     }
     .about-container{
         // background: blue;
@@ -74,5 +75,15 @@
 
     .p-transform{
         transform: rotate(0deg);
+    }
+
+
+
+    @keyframes animateH2 {
+        from{
+            transform: rotateX(45deg);
+        }to{
+            transform: rotateX(0deg);
+        }
     }
 }

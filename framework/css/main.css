@@ -17,7 +17,6 @@
 }
 
 ::-webkit-scrollbar-button {
-  background: blue;
   height: 4px;
 }
 
@@ -829,9 +828,17 @@ html {
 }
 
 #navbar .navbar-logo {
-  padding: 0 10px;
   margin-left: 10px;
   float: left;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-items: center;
+  height: 100%;
+  width: 50px;
 }
 
 #navbar .navbar-link {
@@ -840,18 +847,27 @@ html {
 }
 
 #navbar .navbar-logo-img {
-  width: 40px;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 #navbar .navbar-nav {
   float: right;
   height: 100%;
-  padding-top: 10px;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 10px;
+  justify-items: center;
 }
 
 #navbar .navbar-icons {
   display: inline;
   cursor: pointer;
+  padding: 10px 30px;
 }
 
 #navbar .navbar-icon {
@@ -899,7 +915,8 @@ html {
 }
 
 #navbar li {
-  height: 100%;
+  height: 90%;
+  margin: 15px 0;
   width: 100%;
   display: -ms-grid;
   display: grid;
@@ -911,9 +928,14 @@ html {
 
 #navbar li a {
   width: 70%;
+  height: 100%;
   text-align: center;
   -webkit-transition: all 2s ease;
   transition: all 2s ease;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: inherit;
 }
 
 #navbar .enquery {
@@ -946,6 +968,68 @@ html {
   }
 }
 
+@media screen and (min-width: 770px) {
+  #navbar {
+    height: 10vh;
+    -webkit-box-shadow: 1px 1px 2px;
+            box-shadow: 1px 1px 2px;
+  }
+  #navbar .navbar-logo {
+    margin-left: 30px;
+    width: 60px;
+  }
+  #navbar .navbar-nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  #navbar .navbar-icons {
+    display: none;
+  }
+  #navbar ul {
+    padding: 0;
+    position: static;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    height: 100%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-right: 30px;
+    width: auto;
+    -webkit-animation: none;
+            animation: none;
+  }
+  #navbar li {
+    width: 100%;
+    margin: 0 2px;
+    height: 100%;
+    width: 80px;
+  }
+  #navbar li a {
+    width: 100%;
+    height: 100%;
+    display: -ms-grid;
+    display: grid;
+    justify-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  #navbar .enquery {
+    width: 120px;
+    font-size: 12px;
+    display: -ms-grid;
+    display: grid;
+    justify-items: center;
+  }
+}
+
 .navbar-link-toggle {
   right: 0vw !important;
 }
@@ -962,12 +1046,13 @@ html {
   height: 70vh;
   overflow: hidden;
   width: 100%;
+  padding-top: 9vh;
 }
 
 #home .homepage-phone-image {
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  -o-object-fit: center;
+     object-fit: center;
   -ms-grid-row: 1;
   grid-row: 1;
   -ms-grid-column: 1;
@@ -1032,15 +1117,27 @@ html {
   #home h3 {
     line-height: 70px;
     font-size: 45px;
+    font-family: 'Anton', sans-serif;
+    text-transform: lowercase;
+    text-shadow: -1px -3px 1px #444;
   }
 }
 
 @media screen and (min-width: 1260px) {
+  #home {
+    height: 90vh;
+    padding-top: 10vh;
+  }
   #home .homepage-overlay {
     margin-left: 35px;
   }
   #home h3 {
     width: 400px;
+    font-family: 'Anton', sans-serif;
+    text-transform: lowercase;
+    font-size: 70px;
+    line-height: 80px;
+    text-shadow: 2px -3px 1px #444;
   }
   #home button {
     margin-left: 70px;
@@ -1165,6 +1262,28 @@ html {
 #about .p-transform {
   -webkit-transform: rotate(0deg);
           transform: rotate(0deg);
+}
+
+@-webkit-keyframes animateH2 {
+  from {
+    -webkit-transform: rotateX(45deg);
+            transform: rotateX(45deg);
+  }
+  to {
+    -webkit-transform: rotateX(0deg);
+            transform: rotateX(0deg);
+  }
+}
+
+@keyframes animateH2 {
+  from {
+    -webkit-transform: rotateX(45deg);
+            transform: rotateX(45deg);
+  }
+  to {
+    -webkit-transform: rotateX(0deg);
+            transform: rotateX(0deg);
+  }
 }
 
 #media {

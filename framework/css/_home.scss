@@ -1,14 +1,16 @@
 #home{
     display: grid;
-    // background: url("../../media/homepage.png");
+    // background: url("../../media/moja.jpg");
     // background-size: cover;
     height: 70vh;
     overflow: hidden;
     width: 100%;
+    padding-top: 9vh;
+    // margin-top: 9vw;
     // background: #f40;
     .homepage-phone-image{
         height: 100%;
-        object-fit: cover;
+        object-fit: center;
         grid-row: 1;
         grid-column: 1;
         
@@ -70,14 +72,29 @@
         h3{
             line-height: 70px;
             font-size: 45px;
+            font-family: 'Anton', sans-serif;
+            text-transform: lowercase;
+            // font-size: 70px;
+            // line-height: 80px;
+            text-shadow: -1px -3px 1px #444;
         }
         }
         @include min-media-query($mediaMaxWidth){
+            height: 90vh;
+            padding-top: 10vh;
+            // background: red;
+            // background: #44f;
+
             .homepage-overlay{
                 margin-left: 35px;
             }
             h3{
                 width: 400px;
+                font-family: 'Anton', sans-serif;
+                text-transform: lowercase;
+                font-size: 70px;
+                line-height: 80px;
+                text-shadow: 2px -3px 1px #444;
             }
             button{
                 margin-left: 70px;
