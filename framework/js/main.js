@@ -26,7 +26,10 @@ import {
 }
 from './about.js'
 
-
+import {
+    backTop
+}
+from './back_to_top.js'
 
 // import {
 //     intersect
@@ -128,6 +131,7 @@ const all_function = () => {
     gallery_sector();
     testimonial_sector();
     navbar_sector()
+    backTop();
     
 };
 

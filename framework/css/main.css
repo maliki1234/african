@@ -820,7 +820,7 @@ html {
 }
 
 #navbar {
-  height: 9vh;
+  height: 10vh;
   width: 100%;
   background: #5c1010;
   position: fixed;
@@ -867,7 +867,7 @@ html {
 #navbar .navbar-icons {
   display: inline;
   cursor: pointer;
-  padding: 10px 30px;
+  padding: 10px 10px;
 }
 
 #navbar .navbar-icon {
@@ -885,7 +885,7 @@ html {
 #navbar ul {
   list-style: none;
   position: absolute;
-  top: 9vh;
+  top: 10vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -897,8 +897,8 @@ html {
       flex-direction: column;
   height: 70vh;
   background: #5c1010;
-  width: 50vw;
-  right: -50vw;
+  width: 60vw;
+  right: -60vw;
   -webkit-transition: all 1s ease-in;
   transition: all 1s ease-in;
   -webkit-animation: animating 2s ease;
@@ -915,8 +915,7 @@ html {
 }
 
 #navbar li {
-  height: 90%;
-  margin: 15px 0;
+  height: 100%;
   width: 100%;
   display: -ms-grid;
   display: grid;
@@ -2030,5 +2029,81 @@ footer .footer-input-submit:hover {
   footer .footer-input-submit {
     padding: 0 4px;
   }
+}
+
+#back-top {
+  position: fixed;
+  bottom: 40px;
+  right: 20px;
+  -webkit-transition: display 2s ease;
+  transition: display 2s ease;
+}
+
+.block {
+  width: 40px;
+  height: 40px;
+  display: block;
+  position: relative;
+  border-radius: 50%;
+}
+
+.block::after, .block::before {
+  width: 40px;
+  height: 40px;
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+  top: 0;
+  left: 0;
+}
+
+.block::after {
+  border-top: 0.1em solid #f00;
+  -webkit-animation: after .8s infinite;
+          animation: after .8s infinite;
+}
+
+.block::before {
+  border-bottom: 0.1em solid #f00;
+  -webkit-animation: after 1.2s infinite;
+          animation: after 1.2s infinite;
+}
+
+.back-to-top-img {
+  width: 10px;
+  margin-top: 9px;
+  margin-left: 13px;
+}
+
+.block:hover {
+  background: #2af4;
+  cursor: pointer;
+}
+
+@-webkit-keyframes after {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes after {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+section {
+  width: 100vw;
+  height: 100vh;
 }
 /*# sourceMappingURL=main.css.map */

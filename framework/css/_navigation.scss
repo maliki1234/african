@@ -1,5 +1,5 @@
 #navbar{
-    height: 9vh;
+    height: 10vh;
     width: 100%;
     background: #5c1010;
     position: fixed;
@@ -45,7 +45,7 @@
     .navbar-icons{
         display: inline;
         cursor: pointer;
-        padding: 10px 30px;
+        padding: 10px 10px;
         // background: #f00;
     }
     .navbar-icon{
@@ -62,14 +62,14 @@
     ul{
         list-style: none;
         position: absolute;
-        top: 9vh;
+        top: 10vh;
         display: flex;
         flex-flow: column;
         flex-direction: column;
         height: 70vh;
         background: #5c1010;
-        width: 50vw;
-        right: -50vw;
+        width: 60vw;
+        right: -60vw;
         transition: all 1s ease-in;
 
         animation: animating 2s ease;
@@ -83,6 +83,7 @@
     }
     li:hover{
         background: #000;
+        
         // width: 100%;
         a{
             transform: translateX(10px);
@@ -90,12 +91,13 @@
     }
     li{
         // display:;
-        height: 90%;
-        margin: 15px 0;
+        height: 100%;
+        // margin: 15px 0;
         width: 100%;
         display: grid;
         justify-items: center;
-        align-items: center;        
+        align-items: center;
+        // height: 100%;        
         a{
             width: 70%;
             height: 100%;
